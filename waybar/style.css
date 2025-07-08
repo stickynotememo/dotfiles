@@ -1,1 +1,18 @@
+* {
+	color: #0ccccc;
+	margin: 2px;
+}
+
+window#waybar {
+	background-color: #ffffff;
+	opacity: 1;
+	font-family: monospace;
+}
+
+.module {
+	color: #09999a;
+	padding: 4px;
+	border-radius: 10%;
+	background-color: #eee;
+}
 

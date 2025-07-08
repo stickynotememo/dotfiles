@@ -1,3 +1,29 @@
 {
-  "layer": "top",
+    "layer": "top",
+	"modules-left": ["cpu", "memory", "network", "disk"],
+    "modules-right": ["pulseaudio", "keyboard-state", "clock"],
+    "sway/window": {
+        "max-length": 50
+    },
+
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+	"cpu": {
+		"format": "{usage}% {icon} @ {avg_frequency} GHz",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"interval": 1
+	},
+	"network": {
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+	},
+	"keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		"format": {
+			"numlock": "{icon}",
+			"capslock": "{icon}"
+		},
+	}
 }
