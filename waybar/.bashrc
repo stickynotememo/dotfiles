@@ -9,7 +9,7 @@ export OSH='/home/stickynotememo/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="mairan"
+OSH_THEME="sexy"
 
 # If you set OSH_THEME to "random", you can ignore themes you don't like.
 # OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
@@ -176,3 +176,13 @@ export PATH="$PATH:~/.config/waybar/"
 alias neofetch="fastfetch"
 alias tty-clock="tty-clock -s -C 6"
 alias cbonsai="cbonsai --live -k 80,80,80,80"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+alias yazi="y"
