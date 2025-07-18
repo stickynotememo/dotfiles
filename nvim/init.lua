@@ -253,8 +253,9 @@ require('lazy').setup({
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   'mrcjkb/rustaceanvim',
   {
-    url = 'https://github.com/neoclide/coc.nvim.git',
-    branch = 'release',
+    'neoclide/coc.nvim',
+    branch = 'master',
+    build = 'npm install --frozen-lockfile',
   },
 
   -- NOTE: Plugins can also be added by using a table,
