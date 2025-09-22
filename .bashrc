@@ -9,7 +9,8 @@ export OSH='/home/stickynotememo/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="sexy"
+# OSH_THEME="sexy"
+OSH_THEME="powerline"
 
 # If you set OSH_THEME to "random", you can ignore themes you don't like.
 # OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
@@ -170,12 +171,15 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ## esp32 rust compilation
 export PATH="/home/stickynotememo/.rustup/toolchains/esp/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:$PATH"
 export LIBCLANG_PATH="/home/stickynotememo/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-17.0.1_20240419/esp-clang/lib"
-
 # Waybar config watcher
 export PATH="$PATH:~/.config/waybar/"
+
+# alias ls="ls -lah"
 alias neofetch="fastfetch"
 alias tty-clock="tty-clock -s -C 6"
 alias cbonsai="cbonsai --live -k 80,80,80,80"
+alias yazi="y"
+alias yee="yay -Rcs"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -185,7 +189,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias yazi="y"
 PATH=$PATH:/home/stickynotememo/.local/bin:/home/stickynotememo/.rustup/toolchains/esp/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/stickynotememo/.cargo/bin:/usr/local/bin:/usr/bin:/var/lib/snapd/snap/bin:~/.config/waybar/
 PATH=$PATH:/home/stickynotememo/.local/bin:/usr/local/bin:/usr/bin:/var/lib/snapd/snap/bin
 PATH=$PATH:"/home/stickynotememo/.wine/drive_c/Program Files"
