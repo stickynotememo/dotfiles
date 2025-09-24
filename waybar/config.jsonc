@@ -7,7 +7,7 @@
     },
 
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format": "{:%H:%M %d/%m/%Y}"
     },
 	"cpu": {
 		"format": "{usage}% {icon} @ {avg_frequency} GHz",
