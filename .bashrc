@@ -178,13 +178,14 @@ export PATH="$PATH:~/.config/waybar/"
 alias neofetch="fastfetch"
 alias tty-clock="tty-clock -s -C 6"
 alias cbonsai="cbonsai --live -k 80,80,80,80"
-alias yazi="y"
+alias yazi="ya"
 alias yee="yay -Rcs"
 alias my-grub-install="read -n1 -r -p \"Are you chrooted?\" && grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot --bootloader-id=GRUB --modules=\"tpm\" --disable-shim-lock"
 alias sbctl-verify="sbctl verify 2> /dev/null" # Ignore false PE header spam
 alias ssh="kitty +kitten ssh"
+alias y="yay"
 
-function y() {
+function ya() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
